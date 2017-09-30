@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mr. Robot!</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.jpg"/></a>
+		<div class="dropin">
+			<span class="pageheading">Mr. Robot</span>
+			<input type="search" class="searchbox" placeholder="Find your tech here" />
+		</div>
+		<div>
+			<nav>
+				<ul>
+					<a href="index.html" id="nav-btn">Home</a>
+					<a href="robots.html" id="nav-btn">Robots</a></a>
+					<a href="computers.html" id="nav-btn">Computers</a>
+					<a href="contact.html" id="nav-btn">Contact</a>
+					<a href="about.html" id="nav-btn">About</a>
+					<p class="checkouttext">Add to cart!</p>
+					<a href="robots.html"><img class="checkout" src="images/Buy-NowButton.png"/></a>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="welcomeimage">
+		<img src="images/Mr.-Robot-Welcome.png" height="400px" alt="About us">
+	</div>
+	<form id="contactForm">
+		<fieldset class="frame">
+			<div>
+				<legend>Enter your Contact info below:</legend>
+				<p>
+					<label for="fullname">Full Name:</label><input type="text" name="fullname" id="txt1">
+				</p>
+				<p>
+					<label for="email">   Email:</label><input type="email" name="email" id="">
+				</p>
+				<p>
+					<label for="yloc">   Loaction:</label>
+					<select name="" id="yloc">
+              <option value="0">Moon</option>
+              <option value="1">Earth</option>
+            </select>
+				</p>
+				<p><label for="quest">Your Question</label><br>
+					<textarea name="quest" id="txt1" cols="50" rows="10" maxlength="500"></textarea></p>
+			</div>
+		</fieldset>
+		<p>
+			<button id="btnSendInfo" class="submitbutton">Send Info</button>
+		</p>
+	</form>
+	<footer class="footer">
+		<div class="social">
+			<a href="#"><img class="footpic" src="images/twitter-icon.png"></a>
+			<a href="#"><img class="footpic" src="images/g1.png"></a>
+			<a href="#"><img class="footpic" src="images/youtube.png"></a>
+			<a href="#"><img class="footpic2" src="images/facebook-logo-2.png"></a>
+		</div>
+		<p class="ouradd">Our address is
+			<address class="addrs">1011 Crater Ave, Moon City: THE MOON</address>
+		</p>
+		<p class="ouradd">All site contents is copyright <a href="http://www.mrrobot.com">Mr Robot!</a></p>
+		<p class="text">This page was generated on
+			<time>09:25:04.123</time>.</p>
+	</footer>
+</body>
+<script>
+	$("input, textarea, #yloc").focus(function () {
+		$(this).addClass("focused")
+	});
+	$("input, textarea, #yloc").blur(function () {
+		$(this).removeClass("focused")
+	});
+</script>
+
+</html>

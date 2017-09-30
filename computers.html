@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mr. Robot!</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img class="logo" src="images/logo.jpg"/></a>
+      <div class="dropin">
+        <span class="pageheading">Mr. Robot</span>
+        <input type="search" class="searchbox" placeholder="Find your tech here" />
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <a href="index.html" id="nav-btn">Home</a>
+            <a href="robots.html" id="nav-btn">Robots</a></a>
+            <a href="computers.html" id="nav-btn">Computers</a>
+            <a href="contact.html" id="nav-btn">Contact</a>
+            <a href="about.html" id="nav-btn">About</a>
+            <p class="checkouttext">Add to cart!</p>
+            <a href="robots.html"><img class="checkout" src="images/Buy-NowButton.png"/></a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <form>
+      <fieldset class="frame">
+        <legend class="miniframe">Select a CPU</legend>
+          <p id="rad1"><label for="i3"><input type="radio" name="CPU" id="i3">Intel i3</label></p>
+          <p id="rad2"><label for="i4"><input type="radio" name="CPU" id="i4"></label>Intel i4</p>
+          <p id="rad3"><label for="i7"><input type="radio" name="CPU" id="i7"></label>Intel i7</p>
+      </fieldset>
+      <fieldset class="frame">
+        <legend class="miniframe">Select Ram</legend>
+          <p id="rad4"><label for="8"><input type="radio" name="ram" id="8">8gig</label></p>
+          <p id="rad5"><label for="16"><input type="radio" name="ram" id="16">16gig</label></p>
+      </fieldset>
+      <fieldset class="frame">
+        <legend class="miniframe">Additional Options</legend>
+          <p id="check1"><label for="vrh"><input type="checkbox" name="" id="vrh">Virtual Reality Helmet</label></p>
+          <p id="check2"><label for="3ds"><input type="checkbox" name="" id="3ds">3D Screen</label></p>
+          <p id="check3"><label for="ss"><input type="checkbox" name="" id="ss">Stereo Speakers</label></p>
+      </fieldset>
+      <p>
+        <button>Submit</button>
+      </p>
+    </form>
+    <footer class="footer">
+      <div class="social">
+        <a href="#"><img class="footpic" src="images/twitter-icon.png"></a>
+        <a href="#"><img class="footpic" src="images/g1.png"></a>
+        <a href="#"><img class="footpic" src="images/youtube.png"></a>
+        <a href="#"><img class="footpic2" src="images/facebook-logo-2.png"></a>
+      </div>
+      <p class="ouradd">Our address is <address class="addrs">1011 Crater Ave, Moon City: THE MOON</address></p>
+      <p class="ouradd">All site contents is copyright <a href="http://www.mrrobot.com">Mr Robot!</a></p>
+      <p class="textly">This page was generated on <time>09:25:04.123</time>.</p>
+    </footer>
+    <script>
+      /* TODO: Move To js file */
+      /*********************************************************
+       *
+       *   Test Checkboxes/Radio Buttons Script
+       *
+       *********************************************************/
+      // loop through each form and handle submit event
+      for (var i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var results = '';
+          // loop through all checkboxes to see if checked
+          var checkboxes = form.querySelectorAll("input[type='checkbox']");
+          for (var k = 0; k < checkboxes.length; k++) {
+            results += checkboxes[k].id + '=' + checkboxes[k].checked + '\n';
+          }
+          // loop through all radio butotns to display value
+          var radiobuttons = form.querySelectorAll("input[type='radio']:checked");
+          for (var m = 0; m < radiobuttons.length; m++) {
+            results += radiobuttons[m].name + '=' + radiobuttons[m].value + '\n';
+          }
+          // log results
+          console.log(results);
+        });
+      }
+      
+    $(document).ready(function(){
+      $("#rad1").mouseover(function(){
+        $("#rad1").addClass("inpinteract");
+      });
+      $("#rad1").mouseout(function(){
+         $("#rad1").removeClass("inpinteract")
+      });
+
+      $("#rad2").mouseover(function(){
+        $("#rad2").addClass("inpinteract");
+      });
+      $("#rad2").mouseout(function(){
+        $("#rad2").removeClass("inpinteract")
+      });
+      
+      $("#rad3").mouseover(function(){
+        $("#rad3").addClass("inpinteract");
+      });
+      $("#rad3").mouseout(function(){
+        $("#rad3").removeClass("inpinteract")
+      });
+
+      $("#rad4").mouseover(function(){
+        $("#rad4").addClass("inpinteract");
+      });
+      $("#rad4").mouseout(function(){
+        $("#rad4").removeClass("inpinteract")
+      });
+
+      $("#rad5").mouseover(function(){
+        $("#rad5").addClass("inpinteract");
+      });
+      $("#rad5").mouseout(function(){
+        $("#rad5").removeClass("inpinteract")
+      });
+
+      $("#check1").mouseover(function(){
+        $("#check1").addClass("inpinteract");
+      });
+      $("#check1").mouseout(function(){
+        $("#check1").removeClass("inpinteract")
+      });
+
+      $("#check2").mouseover(function(){
+        $("#check2").addClass("inpinteract");
+      });
+      $("#check2").mouseout(function(){
+        $("#check2").removeClass("inpinteract")
+      });
+
+      $("#check3").mouseover(function(){
+        $("#check3").addClass("inpinteract");
+      });
+      $("#check3").mouseout(function(){
+        $("#check3").removeClass("inpinteract")
+      });
+    });
+    
+    </script>
+  </body>
+</html>

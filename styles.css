@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Economica|Orbitron|Russo+One|Teko');
+/*  font-family: 'Orbitron', sans-serif;
+    font-family: 'Teko', sans-serif;
+    font-family: 'Russo One', sans-serif;
+    font-family: 'Economica', sans-serif;    */
+body {
+    background-color: #D5FBFF;
+}
+
+button {
+    padding: 10px;
+    font-family: 'Economica', sans-serif;
+    font-size: 20px;
+}
+
+header {
+    float:left;
+    display: block;
+    width: 100%;
+    background-color: #34495e;
+}
+
+nav {
+    float: left;
+    display:block;
+    margin-top: -35px;
+    margin-left: 180px;
+    margin-bottom: 30px;
+}
+
+#imgrobo {
+    height: 200px;
+    width: auto;
+}
+
+#nav-btn {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),
+    0 6px 20px 0 rgba(0,0,0,0.19);
+    display: block;
+    float: left;
+    background-color: #1abc9c;
+    border-color: #056981;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+.borderme {
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+}
+
+.dropin {
+    margin-top: 20px;
+}
+
+.logo {
+    float: left;
+    height: 150px;
+    width: 150px;
+    border-radius: 45px;
+    border-style: double;
+    border-width: thin;
+    border-color: black;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: white;
+}
+
+.pageheading {
+    float: left;
+    font-family: 'Russo One', sans-serif;
+    font-size: 110px;
+    color:red;
+    margin-top: 10px;
+    padding-top: 40px;
+    margin-left: 30px;
+}
+
+.checkouttext {
+    display: block;
+    float:right;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
+.checkout {
+    display: block;
+    float: right;
+    height:60px;
+    width: auto;
+    margin-left: 320px;
+    margin-top: -10px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.searchbox {
+    float: right;
+    display:block;
+    height: 30px;
+    font-family: 'Economica', sans-serif;
+    font-size: large;
+    font-style: italic;
+    width: 240px;
+    border: none;
+    border-radius:10px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.robot {
+    display:block;
+    float:left;
+    margin-left: 180px;
+}
+
+.hedindex {
+    text-align: center;
+    display: block;
+    color: #083198;
+    width: 100%;
+    font-size: 34px;
+    font-style: oblique;
+}
+
+.welcome-img {
+    display: inline-block;
+    height: 280px;
+    width: auto;
+    margin-left: 310px;
+}
+
+.written {
+    column-count: 2;
+    font-family: 'Economica', sans-serif;
+    column-gap: 15px;
+}
+
+.blok {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.frame {
+    border-color: blue;
+    border-radius: 5px;
+    border-style: solid;
+    border-width:4px;
+    margin: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.miniframe {
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    padding-left: 20px;
+    border-color: green;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.price {
+    display: block;
+    font-size: 80px;
+    color:red;
+    float:right;
+    font-family: 'Russo One', sans-serif;
+    margin-right: 30px;
+    margin-top: -20px;
+}
+
+.amnt {
+    margin-right: -260px;
+    margin-top: 80px;
+    border-radius:7px;
+    display: block;
+    float:right;
+}
+
+.inpinteract {
+    color:red;
+    background-color: lightblue;
+}
+
+.footer {
+    background-color: #1abc9c;
+    color: #8FEEF8;
+    font-family: 'Teko', sans-serif;
+    height: 140px;
+    width: 100%;
+}
+
+.social {
+  float:right;
+  display: block;
+  padding-top: 15px;
+  margin-left:50px;
+}
+
+.footpic {
+ display:inline-block;
+ width:50px;
+ margin-left:20px;
+ margin-right: 20px;
+ height:auto;
+}
+
+.footpic2 {
+ display:inline-block;
+ width:140px;
+ margin-left:20px;
+ margin-right: 20px;
+ height:auto;
+}
+
+.addrs {
+    color: red;
+    font-size: large;
+    margin:0px 0px 0px 20px;
+    padding:0px;
+}
+
+.text {
+    background-color: black;
+    border-color: green;
+    border-style: solid;
+    border-width:3px;
+    border-radius: 7px;
+    display: block;
+    float:right;
+    padding:5px;
+    margin:0px 20px 0px 0px;
+}
+
+.ouradd {
+    padding-top: 5px;
+    margin-left: 20px;
+    margin-top:0px;
+}
+
+.focused {
+    border-color: #333;
+    border-width: 3px;
+}
+
+/*preloader screen*/
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mr. Robot!</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<a href="index.html"><img class="logo" src="images/logo.jpg"/></a>
+		<div class="dropin">
+			<span class="pageheading">Mr. Robot</span>
+			<input id="textlight" type="search" class="searchbox" onkeyup="searchInme()" placeholder="Find your new friend" />
+		</div>
+		<div>
+			<nav>
+				<ul>
+					<a href="index.html" id="nav-btn">Home</a>
+					<a href="robots.html" id="nav-btn">Robots</a></a>
+					<a href="computers.html" id="nav-btn">Computers</a>
+					<a href="contact.html" id="nav-btn">Contact</a>
+					<a href="about.html" id="nav-btn">About</a>
+					<p class="checkouttext">Add to cart!</p>
+					<a href="robots.html"><img class="checkout" src="images/Buy-NowButton.png"/></a>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<fieldset class="frame">
+		<legend class="miniframeame"><strong>Mr. Robot's Top Robot Models</strong></legend>
+		<ul id="ul">
+			<li>
+				<div id="glow">
+					<article class="miniframeame">
+						<h4><label for="imgrobo1">Name: </label> R.E.T.</h4>
+						<p class="price">$59.99</p>
+						<p class="amnt">Quantity <input type="number" /></p>
+						<img id="imgrobo" src="images/roboDog.png" alt="robo1">
+						<h5><strong>Description:</strong><br>This was our first robot. He was modeled after the famous movie character E.T.</h5>
+					</article>
+				</div>
+			</li>
+			<li>
+				<div id="glow1">
+					<article class="miniframeame">
+						<h4><label for="imgrobo2">Name: </label> Butler.Bot</h4>
+						<p class="price">$129.99</p>
+						<p class="amnt">Quantity <input type="number" /></p>
+						<img id="imgrobo" src="images/robot2.png" alt="robo1">
+						<h5><strong>Description:</strong> <br>This was our second robot. He makes a mean martini!</h5>
+					</article>
+				</div>
+			</li>
+			<li>
+				<div id="glow2">
+					<article class="miniframeame">
+						<h4><label for="imgrobo3">Name: </label> Mega Man</h4>
+						<p class="price">$789.99</p>
+						<p class="amnt">Quantity <input type="number" /></p>
+						<img id="imgrobo" src="images/robot3.png" alt="robo1">
+						<h5><strong>Description:</strong> <br>This is our newest model. This one will follow you around the house.</h5>
+					</article>
+				</div>
+			</li>
+		</ul>
+	</fieldset>
+	<footer class="footer">
+		<div class="social">
+			<a href="#"><img class="footpic" src="images/twitter-icon.png"></a>
+			<a href="#"><img class="footpic" src="images/g1.png"></a>
+			<a href="#"><img class="footpic" src="images/youtube.png"></a>
+			<a href="#"><img class="footpic2" src="images/facebook-logo-2.png"></a>
+		</div>
+		<p class="ouradd">Our address is
+			<address class="addrs">1011 Crater Ave, Moon City: THE MOON</address>
+		</p>
+		<p class="ouradd">All site contents is copyright <a href="http://www.mrrobot.com">Mr Robot!</a></p>
+		<p class="text">This page was generated on
+			<time>09:25:04.123</time>.</p>
+	</footer>
+	<template id="producttemplate">
+		<article>
+			<label id="lblName" for="productimage">Name:</label>
+			<img id="pimage" name="productimage" class="productarticlelargeimage" src="" alt="product image">
+			<article name="productdescription" class="productarticledescription">
+			</article>
+		</article>
+	</template>
+	<template id="user">
+		<div>User</div>
+		<template id="address">
+			<div>Address</div>
+		</template>
+	</template>
+	<script>
+		var robo = document.querySelector('#robo1').createShadowRoot();
+		/*Step1*/
+		let prdTemplate = document.querySelector('#producttemplate');
+		/*Step2*/
+		let clone = document.importNode(prdTemplate.content, true);
+		/*Step3*/
+
+		clone.querySelector('#pimage').src = 'images/roboDog.png';
+		clone.querySelector('#lblName').textContent = 'R.E.T';
+
+		/*Step4*/
+		robo.appendChild(clone);
+		let userTemplate = document.querySelector('#user');
+		let userClone = document.importNode(userTemplate.content, true);
+		document.body.appendChild(userClone);
+		let addressTemplate = document.querySelector('#address');
+		let addressClone = document.importNode(addressTemplate.content, true);
+		document.body.appendChild(addressClone);
+	</script>
+
+	<script>
+				$(document).ready(function () {
+
+					$("#glow").mouseover(function () {
+						$("#glow").addClass("inpinteract");
+					});
+					$("#glow").mouseout(function () {
+						$("#glow").removeClass("inpinteract")
+					});
+
+					$("#glow1").mouseover(function() {
+						$("#glow1").addClass("inpinteract");
+					})
+					$("#glow1").mouseout(function () {
+						$("#glow1").removeClass("inpinteract")
+					});
+
+					$("#glow2").mouseover(function() {
+						$("#glow2").addClass("inpinteract");
+					})
+					$("#glow2").mouseout(function () {
+						$("#glow2").removeClass("inpinteract")
+					});
+
+					$("#textlight").keydown(function () {
+						$("#textlight").addClass("borderme")
+					});
+				});
+
+	</script>
+	<script>
+		function searchInme() {
+
+			var input, filter, ul, li, h4, i;
+
+			input = document.getElementById('textlight');
+			filter = input.value.toUpperCase();
+			ul = document.getElementById("ul");
+			li = ul.getElementsByTagName('li');
+
+			// Loops through the name of each robot and displays the one that matches query
+			for (i = 0; i < li.length; i++) {
+				h4 = li[i].getElementsByTagName("h4")[0];
+				if (h4.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>
