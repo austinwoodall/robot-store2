@@ -3,29 +3,10 @@
     font-family: 'Teko', sans-serif;
     font-family: 'Russo One', sans-serif;
     font-family: 'Economica', sans-serif;    */
-body {
-    background-color: #D5FBFF;
-}
 
-button {
-    padding: 10px;
-    font-family: 'Economica', sans-serif;
-    font-size: 20px;
-}
-
-header {
-    float:left;
-    display: block;
-    width: 100%;
+body,html {
     background-color: #34495e;
-}
-
-nav {
-    float: left;
-    display:block;
-    margin-top: -35px;
-    margin-left: 180px;
-    margin-bottom: 30px;
+    color: white;
 }
 
 #imgrobo {
@@ -82,7 +63,7 @@ ul {
     float: left;
     font-family: 'Russo One', sans-serif;
     font-size: 110px;
-    color:red;
+    color: white;
     margin-top: 10px;
     padding-top: 40px;
     margin-left: 30px;
@@ -131,7 +112,7 @@ ul {
 .hedindex {
     text-align: center;
     display: block;
-    color: #083198;
+    color: white;
     width: 100%;
     font-size: 34px;
     font-style: oblique;
@@ -208,10 +189,7 @@ ul {
 }
 
 .social {
-  float:right;
-  display: block;
-  padding-top: 15px;
-  margin-left:50px;
+  float: right;
 }
 
 .footpic {
